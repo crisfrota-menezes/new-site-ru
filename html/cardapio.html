@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cardápio</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <link rel="stylesheet" href="../css/big.css" />
+    <link rel="stylesheet" href="../css/small.css" />
   </head>
-  <body>
-    <section id="cardapio-screen" class="container-full">
+  <body onresize="mudouTamanho()">
+    <section id="cardapio-screen">
       <div id="nav">
-        <nav>
-          <h1>Restaurante<br />Universitário</h1>
+        <h1>Restaurante<br />Universitário</h1>
+        <span
+          id="burguer"
+          class="material-symbols-outlined"
+          onclick="clickMenu()"
+        >
+          menu
+        </span>
+        <nav id="menu">
           <a href="home.html" target="_self" rel="start">Home</a>
           <a href="cardapio.html" target="_self" rel="next">Cardápio</a>
           <a href="menu.html" target="_self" rel="next">Menu</a>
@@ -25,5 +37,22 @@
         <ul id="cardapio-list"></ul>
       </div>
     </section>
+
+    <script>
+      function clickMenu() {
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
+          content.style.display = "block";
+        } else {
+          menu.style.display = "block";
+          content.style.display = "none";
+        }
+      }
+
+      function mudouTamanho() {
+        if (window.innerWidth >= 768) menu.style.display = "block";
+        else menu.style.display = "none";
+      }
+    </script>
   </body>
 </html>
