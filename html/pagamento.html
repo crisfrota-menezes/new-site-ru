@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
+    <title>Pagamento</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../css/small.css" />
   </head>
   <body onresize="mudouTamanho()">
-    <section id="menu-screen" class="container">
+    <section id="pagamento-screen" class="container">
       <div id="nav">
         <h1>Restaurante<br />Universitário</h1>
         <span
@@ -36,9 +36,12 @@
       </div>
 
       <div id="content">
-        <h2>Menu de opções</h2>
+        <h2>Opções de Pagamento</h2>
         <hr />
-        <ul id="menu-list"></ul>
+        <ul id="pagamento-list"></ul>
+        <p>Total: <span id="valor-total">R$ 0.00</span></p>
+        <button id="pix">Pagar com PIX</button>
+        <button id="cartao">Pagar com Cartão</button>
       </div>
     </section>
 

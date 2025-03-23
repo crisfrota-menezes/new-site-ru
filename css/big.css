@@ -28,14 +28,13 @@ body {
   max-width: 600px;
   width: 50%;
   padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
 }
 
 .container#home-screen,
-.container#cardapio-screen {
+.container#cardapio-screen,
+.container#carrinho-screen,
+.container#menu-screen,
+.container#pagamento-screen {
   min-width: 98.2vw;
   min-height: 96.5vh;
   border-radius: 0;
