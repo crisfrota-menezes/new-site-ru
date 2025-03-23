@@ -115,10 +115,6 @@ nav#navbar {
   display: none;
 }
 
-nav#menu {
-  display: none;
-}
-
 nav > a {
   font-size: 1.25rem;
   font-weight: bold;
