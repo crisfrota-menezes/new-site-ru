@@ -8,6 +8,185 @@
   --cor3: #cfcfcf;
   --cor4: #fecc00;
   --cor5: #f2b707;
+  --cor6: #000000;
+}
+
+* {
+  font-family: var(--fonte-padrao);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor0);
+}
+
+.container {
+  background: var(--cor1);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--cor6);
+  font-size: 1.875rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button-group {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-weight: bold;
+  background: var(--cor2);
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--cor3);
+}
+
+.button-admin {
+  color: var(--cor4);
+  font-size: 1.2rem;
+  padding: 8px;
+  width: 45px;
+}
+
+figure {
+  margin-top: auto;
+  text-align: center;
+}
+
+img.logo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span#burguer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+span#burguer:hover {
+  background-color: var(--cor2);
+}
+
+section > nav {
+  background-color: var(--cor6);
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav#menu {
+  display: none;
+}
+
+nav > a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--cor7);
+  border-radius: 8px;
+}
+
+nav > a:hover {
+  background-color: var(--cor4);
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  background-color: var(--cor2);
+  border: none;
+  border-radius: 12px;
+}
+
+button[type="submit"] {
+  background-color: var(--cor4);
+  color: var(--cor1);
+  font-size: 1.25rem;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--cor5);
+}
+
+h2 {
+  text-align: center;
+}
+
+div#content > h2 {
+  margin-top: 20px;
+}
+
+hr {
+  width: 280px;
+  margin: 0 auto;
+  border: 1px solid var(--cor3);
+}
+
+/* faz as configurações faltantes referentes a tela home, login e cardapio: */
+
+/*:root {
+  --fonte-padrao: "Roboto", monospace;
+  --cor0: #d6d6d6;
+  --cor1: #ffffff;
+  --cor2: #e0dfdf;
+  --cor3: #cfcfcf;
+  --cor4: #fecc00;
+  --cor5: #f2b707;
 }
 
 * {
@@ -18,13 +197,15 @@
 
 body {
   background-color: var(--cor0);
+  height: 100vh;
+  width: 100vw;
 }
 
 section {
   width: 350px;
-  height: 450px;
+  height: 550px;
   background: var(--cor1);
-  border-radius: 10px;
+  border-radius: 20px;
   flex-direction: column;
   position: absolute;
   top: 50%;
@@ -158,8 +339,12 @@ input {
   margin: 0 auto;
 }
 
+section > div > picture {
+  display: flex;
+}
+
 section > div > picture > img#menina {
-  display: none;
+  flex: auto;
 }
 
 section > div > picture > img.logo {
@@ -177,4 +362,4 @@ hr {
   width: 280px;
   margin: 0 auto;
   border: 1px solid var(--cor3);
-}
+}*/

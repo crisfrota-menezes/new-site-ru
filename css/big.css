@@ -1,6 +1,135 @@
 @charset "UTF-8";
 
-@media (min-width: 768px) {
+:root {
+  --fonte-padrao: "Roboto", monospace;
+  --cor0: #d6d6d6;
+  --cor1: #ffffff;
+  --cor2: #e0dfdf;
+  --cor3: #cfcfcf;
+  --cor4: #fecc00;
+  --cor5: #f2b707;
+  --cor6: #000000;
+}
+
+* {
+  font-family: var(--fonte-padrao);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor0);
+}
+
+.container {
+  max-width: 600px;
+  width: 50%;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.container#home-screen,
+.container#cardapio-screen {
+  min-width: 98.2vw;
+  min-height: 96.5vh;
+  border-radius: 0;
+}
+
+header {
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.button-group {
+  display: flex;
+  grid-column: span 2;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+.button-admin {
+  align-self: center;
+}
+
+figure {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+img.logo {
+  max-width: 200px;
+}
+
+div > h2 {
+  position: absolute;
+  font-size: 1.875rem;
+  padding: 18px 25px;
+  left: 250px;
+  top: 0;
+  transform: translateY(20px);
+}
+
+div > hr {
+  width: 300px;
+  position: absolute;
+  left: 250px;
+  top: 75px;
+  transform: translateY(20px);
+}
+
+div > span#burguer {
+  display: none;
+}
+
+section > div#nav {
+  background-color: var(--cor0);
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+section > div#nav > h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section > div#nav > nav {
+  display: block;
+  position: relative;
+  top: 30%;
+  transform: translateY(-30%);
+}
+
+section > div#nav > nav > a {
+  font-size: 1.6rem;
+  border-radius: 0;
+  padding: 20px;
+}
+
+/*@media (min-width: 768px) {
   :root {
     --fonte-padrao: "Roboto", monospace;
     --cor0: #d6d6d6;
@@ -58,7 +187,6 @@
     margin: 0;
     display: flex;
     position: relative;
-    /* posiciona no meio da barra de navegação verticalmente independente do tamanho da tela */
     top: 25%;
     transform: translateY(-50%);
     padding: 10px;
@@ -70,5 +198,4 @@
     background-color: var(--cor4);
   }
 
-  /* corrigir posteriormente a imagem */
-}
+}*/
