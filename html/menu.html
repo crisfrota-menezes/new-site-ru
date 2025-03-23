@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cardápio</title>
+    <title>Menu</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -27,7 +27,7 @@
         >
           menu
         </span>
-        <nav id="navbar">
+        <nav id="menu">
           <a href="home.html" target="_self" rel="start">Home</a>
           <a href="cardapio.html" target="_self" rel="next">Cardápio</a>
           <a href="menu.html" target="_self" rel="next">Menu</a>
@@ -36,26 +36,30 @@
       </div>
 
       <div id="content">
-        <h2>Cardápio do Dia</h2>
+        <h2>Menu de opções</h2>
         <hr />
-        <ul id="cardapio-list"></ul>
+        <ul id="menu-list"></ul>
       </div>
     </section>
 
     <script>
       function clickMenu() {
-        if (navbar.style.display === "block") {
-          navbar.style.display = "none";
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
           content.style.display = "block";
         } else {
-          navbar.style.display = "block";
+          menu.style.display = "block";
           content.style.display = "none";
         }
       }
 
       function mudouTamanho() {
-        if (window.innerWidth >= 768) navbar.style.display = "block";
-        else navbar.style.display = "none";
+        if (window.innerWidth >= 768) menu.style.display = "block";
+        else menu.style.display = "none";
+      }
+
+      function navegou() {
+        /* Após clicar para navegar em outra opção da barra de navegação, seta a barra de navegação novamente como none */
       }
     </script>
   </body>
