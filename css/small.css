@@ -27,12 +27,40 @@ body {
 }
 
 .container {
+  font-size: 1.2rem;
   background: var(--cor1);
   border-radius: 20px;
   width: 100%;
   max-width: 350px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container#ticket-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content {
+  background: #fff;
+  border: 2px dashed #28a745;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+#codigo {
+  font-weight: bolder;
+  font-size: 1.5em;
+  color: #28a745;
+  letter-spacing: 3px;
 }
 
 header {
@@ -73,27 +101,25 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Adicione margens ao título e à linha horizontal */
 div#content > h2 {
   margin-top: 20px;
-  margin-bottom: 15px; /* Espaço entre o título e a linha */
+  margin-bottom: 15px;
 }
 
 hr {
-  margin-bottom: 20px; /* Espaço entre a linha e a lista de produtos */
+  margin-bottom: 20px;
 }
 
-/* Estilize a lista de produtos para ter margens internas */
 #carrinho-list {
   list-style: none;
   padding: 10px 0;
-  min-height: 100px; /* Espaço reservado para futuros itens */
+  min-height: 100px;
 }
 
-/* Ajuste a margem do botão para garantir espaço abaixo da lista */
-button#finalizar-pedido {
+button#finalizar-pedido,
+button#pix,
+button#cartao {
   margin-top: 20px;
-  margin-left: 95px;
 }
 
 .button-admin {
