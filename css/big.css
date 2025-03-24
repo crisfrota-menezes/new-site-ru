@@ -22,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--cor0);
+  overflow: hidden;
 }
 
 .container {
@@ -35,27 +36,40 @@ body {
 .container#carrinho-screen,
 .container#menu-screen,
 .container#pagamento-screen {
+  display: flex;
+  flex-direction: row;
   min-width: 98.2vw;
   min-height: 96.5vh;
   border-radius: 0;
 }
 
+.container#login-screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
 header {
   grid-column: span 2;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 0;
+}
+
+img.logo {
+  margin-top: 60px;
+  max-width: 200px;
 }
 
 .button-group {
   display: flex;
-  grid-column: span 2;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 button {
@@ -69,30 +83,24 @@ button {
   align-self: center;
 }
 
-figure {
-  grid-column: span 2;
-  justify-self: center;
+h2 {
+  font-size: 2rem;
+  position: fixed;
+  top: 38px;
+  left: 265px; /* Ajuste da barra de navegação */
 }
 
-img.logo {
-  max-width: 200px;
+hr {
+  position: fixed;
+  top: 92px;
+  left: 250px; /* Ajuste da barra de navegação */
 }
 
-div > h2 {
-  position: absolute;
-  font-size: 1.875rem;
-  padding: 18px 25px;
-  left: 250px;
-  top: 0;
-  transform: translateY(20px);
-}
-
-div > hr {
-  width: 300px;
-  position: absolute;
-  left: 250px;
-  top: 75px;
-  transform: translateY(20px);
+button#finalizar-pedido {
+  position: fixed;
+  margin-left: 0;
+  left: 175px; /* Ajuste da barra de navegação */
+  top: 90%;
 }
 
 div > span#burguer {
@@ -128,73 +136,16 @@ section > div#nav > nav > a {
   padding: 20px;
 }
 
-/*@media (min-width: 768px) {
-  :root {
-    --fonte-padrao: "Roboto", monospace;
-    --cor0: #d6d6d6;
-    --cor1: #ffffff;
-    --cor2: #e0dfdf;
-    --cor3: #cfcfcf;
-    --cor4: #fecc00;
-    --cor5: #f2b707;
-    --cor6: #d4d4d4;
-    --cor7: #000000;
-  }
+div#content {
+  flex: 1;
+  padding-left: 30px;
+}
 
-  * {
-    font-family: var(--fonte-padrao);
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background-color: var(--cor1);
-  }
-
-  section.container-full {
-    margin-left: 250px;
-    padding: 20px;
-    width: calc(100% - 250px);
-  }
-
-  div > h2 {
-    margin-top: 7px;
-    text-align: justify;
-    font-size: 1.875rem;
-  }
-
-  nav {
-    background-color: var(--cor6);
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  nav > h1 {
-    font-size: 1.875rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  nav > a {
-    font-size: 1.25rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 0;
-    display: flex;
-    position: relative;
-    top: 25%;
-    transform: translateY(-50%);
-    padding: 10px;
-    text-decoration: none;
-    color: var(--cor7);
-  }
-
-  nav > a:hover {
-    background-color: var(--cor4);
-  }
-
-}*/
+/* Garante que a imagem apareça em telas grandes */
+#menina {
+  display: block !important;
+  position: fixed;
+  left: 42vw;
+  top: 20vh;
+  width: 440px;
+}
