@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Compras</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/big.css"
+      media="screen and (min-width: 768px)"
+    />
+    <link rel="stylesheet" href="../css/small.css" />
+  </head>
+  <body onresize="mudouTamanho()">
+    <section id="compras-screen" class="container">
+      <div id="nav">
+        <h1>Restaurante<br />Universitário</h1>
+        <span
+          id="burguer"
+          class="material-symbols-outlined"
+          onclick="clickMenu()"
+        >
+          menu
+        </span>
+        <nav id="navbar">
+          <a href="home.html" target="_self" rel="start">Home</a>
+          <a href="compras.html" target="_self" rel="next">Compras</a>
+          <a href="execucao.html" target="_self" rel="next">Execução</a>
+        </nav>
+      </div>
+
+      <div id="content">
+        <h2>Relatório de Compras</h2>
+        <hr />
+        <ul id="compras-list"></ul>
+      </div>
+    </section>
+
+    <script>
+      function clickMenu() {
+        if (navbar.style.display === "block") {
+          navbar.style.display = "none";
+          content.style.display = "block";
+        } else {
+          navbar.style.display = "block";
+          content.style.display = "none";
+        }
+      }
+
+      function mudouTamanho() {
+        if (window.innerWidth >= 768) navbar.style.display = "block";
+        else navbar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

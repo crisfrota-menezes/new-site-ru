@@ -37,7 +37,10 @@ body {
 .container#cardapio-screen,
 .container#carrinho-screen,
 .container#menu-screen,
-.container#pagamento-screen {
+.container#pagamento-screen,
+.container#home-adm-screen,
+.container#compras-screen,
+.container#execucao-screen {
   display: flex;
   flex-direction: row;
   min-width: 98.2vw;
@@ -112,13 +115,19 @@ hr {
   left: 250px; /* Ajuste da barra de navegação */
 }
 
-button#finalizar-pedido,
-button#pix,
-button#cartao {
+button#finalizar-pedido {
   position: fixed;
   margin-left: 0;
-  left: 175px; /* Ajuste da barra de navegação */
+  left: 270px; /* Ajuste da barra de navegação */
   top: 90%;
+}
+
+button#pix,
+button#cartao {
+  width: 30vw;
+  position: relative;
+  left: 230px;
+  top: 85%;
 }
 
 div > span#burguer {
@@ -164,7 +173,8 @@ div#content {
 }
 
 /* Garante que a imagem apareça em telas grandes */
-#menina {
+#menina,
+#menina2 {
   display: block !important;
   position: fixed;
   left: 42vw;
