@@ -17,10 +17,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     container.innerHTML = html;
     container.style.display = "flex";
 
-    // Oculta a tela anterior
     document.querySelector(".container").style.display = "none";
 
-    container.querySelector(".container#login-screen").style.display = "block";
+    container.querySelector(".container#login-screen").style.display = "grid";
     // Re-inicializa o formulário
     setupLoginForm();
   });
