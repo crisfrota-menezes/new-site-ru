@@ -9,7 +9,7 @@
       href="css/big.css"
       media="screen and (min-width: 768px)"
     />
-    <title>RU-UTFPR</title>
+    ##RU-UTFPR
     <link
       rel="shortcut icon"
       href="https://icons.iconarchive.com/icons/icons8/windows-8/128/City-Restaurant-icon.png"
